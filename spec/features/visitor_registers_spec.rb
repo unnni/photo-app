@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 describe 'visitor registers for the site' do
+	before do 
+		@user = FactoryGirl.create(:user)
+	end
+
 	it ' visitor registers' do	
 		visit root_path
 		expect(page).to have_text("Welcome to the Photo App")

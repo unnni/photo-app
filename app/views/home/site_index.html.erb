@@ -1,4 +1,7 @@
 <h1>Welcome to the Photo App</h1>
 
-<p> <%= link_to("Share photos now!", new_user_registration_path) %> </p>
 
+<% if !(user_signed_in?) %>
+	<p> <%= link_to("Share photos now!", new_user_registration_path) %> </p>
+	<p> <%= link_to("Sign in", new_user_session_path) %> </p>
+<% end %>
