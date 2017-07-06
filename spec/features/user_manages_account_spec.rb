@@ -1,4 +1,5 @@
 require 'rails_helper'
+	
 	describe "user gets to manage account" do
 		before do
 			@user = FactoryGirl.create(:user)
