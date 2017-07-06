@@ -3,7 +3,7 @@
 <div> 
 	<% if @album.errors.any? %>
 		<div id="error_explanation">
-  			<h2>Uh oh!  See below for errors!</h2>
+  			<h2>Error!  See below for errors!</h2>
   			<ul>
   				<% @album.errors.full_messages.each do |message| %>
     				<li><%= message %></li>
@@ -14,7 +14,6 @@
 
 	<%= form_for @album do |f| %>
 		<%= f.text_field :title %>
-		<%= f.hidden_field :user_id, value: current_user.id %>
 		<%= f.submit "Create Album" %>
 	<% end %>
 </div>
