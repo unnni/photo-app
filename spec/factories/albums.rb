@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :album do
-    name "MyString"
-    belongs_to ""
+    title "New"
+    user	
   end
 end

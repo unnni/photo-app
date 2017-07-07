@@ -1,9 +1,13 @@
 class AlbumsController < ApplicationController
 
+
+	def index
+		@album = current_user.albums.all
+	end
+
 	def show
 		@album = Album.find(params[:id])
 	end
-
 
 	def new
 		@album = current_user.albums.new
