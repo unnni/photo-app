@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   	resources :images
   end
 
+  resources :groups
+  
   resources :users, only: [] do
   	get :dashboard
   end
