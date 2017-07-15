@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
 
 	def new
 		@group = current_user.groups.new
+		1.times { @group.group_users.build}
 	end
 
 	def create
@@ -24,6 +25,8 @@ class GroupsController < ApplicationController
 	private
 
 	def group_params
-		params.require(:group).permit(:name, :user_id)
+		params.require(:group).permit(:name, :user_id,
+		group_users_attributes: [:user_id, :group_id]
+	)
 	end
 end

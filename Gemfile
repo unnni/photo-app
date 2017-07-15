@@ -21,6 +21,8 @@ gem 'paperclip'
 gem 'figaro'
 gem 'aws-sdk-rails'
 gem 'aws-sdk'
+gem 'cocoon'
+gem 'selenium-webdriver'
 # gem 'redis', '~> 3.0'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
